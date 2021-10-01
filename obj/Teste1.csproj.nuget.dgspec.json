@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anton\\Repositorio\\Teste1\\Teste1.csproj": {}
+    "C:\\Users\\anton\\Repositorio\\ProjetoCRUD\\Teste1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anton\\Repositorio\\Teste1\\Teste1.csproj": {
+    "C:\\Users\\anton\\Repositorio\\ProjetoCRUD\\Teste1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\Repositorio\\Teste1\\Teste1.csproj",
+        "projectUniqueName": "C:\\Users\\anton\\Repositorio\\ProjetoCRUD\\Teste1.csproj",
         "projectName": "Teste1",
-        "projectPath": "C:\\Users\\anton\\Repositorio\\Teste1\\Teste1.csproj",
+        "projectPath": "C:\\Users\\anton\\Repositorio\\ProjetoCRUD\\Teste1.csproj",
         "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\Repositorio\\Teste1\\obj\\",
+        "outputPath": "C:\\Users\\anton\\Repositorio\\ProjetoCRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
