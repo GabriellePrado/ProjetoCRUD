@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Teste1.Models.Departamento
+namespace ProjetoVendas.Models.Departamento
 {
     public class Departamento
     {

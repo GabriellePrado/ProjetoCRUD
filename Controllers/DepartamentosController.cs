@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Teste1.Data;
-using Teste1.Models.Departamento;
+using ProjetoVendas.Data;
+using ProjetoVendas.Models.Departamento;
 
-namespace Teste1.Controllers
+namespace ProjetoVendas.Controllers
 {
     public class DepartamentosController : Controller
     {
-        private readonly Teste1Context _context;
+        private readonly ProjetoVendasContext _context;
 
-        public DepartamentosController(Teste1Context context)
+        public DepartamentosController(ProjetoVendasContext context)
         {
             _context = context;
         }

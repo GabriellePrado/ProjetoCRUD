@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjetoVendas.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Teste1.Models;
-using Teste1.Models.ViewsModels;
 
-namespace Teste1.Controllers
+namespace ProjetoVendas.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,9 +17,7 @@ namespace Teste1.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Sistemas de Vendas";
-            ViewData["SubMessage"] = "projeto baseado no curso C# - POO";
-            ViewData["Desenvolvedora"] = "Gabrielle Prado";
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
