@@ -33,4 +33,3 @@ C:\Users\anton\Repositorio\Teste1\obj\Debug\netcoreapp2.1\Teste1.dll
 C:\Users\anton\Repositorio\Teste1\obj\Debug\netcoreapp2.1\Teste1.pdb
 C:\Users\anton\Repositorio\Teste1\obj\Debug\netcoreapp2.1\Teste1.genruntimeconfig.cache
 C:\Users\anton\Repositorio\Teste1\obj\Debug\netcoreapp2.1\Teste1.csproj.CopyComplete
-C:\Users\anton\Repositorio\Teste1\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Index.cshtml.g.cs
