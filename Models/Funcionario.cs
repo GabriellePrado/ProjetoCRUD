@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjetoVendas.Models.Departamento
+namespace ProjetoVendas.Models
 {
-    public class Departamento
+    public class Funcionario
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-
-        
+        public string NomeFuncionario { get; set; }
     }
 }
