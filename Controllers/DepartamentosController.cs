@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Data;
-using ProjetoVendas.Models.Departamento;
+using ProjetoVendas.Models;
 
 namespace ProjetoVendas.Controllers
 {

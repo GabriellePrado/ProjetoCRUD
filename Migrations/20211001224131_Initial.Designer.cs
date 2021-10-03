@@ -18,7 +18,7 @@ namespace ProjetoVendas.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("ProjetoVendas.Models.Departamento.Departamento", b =>
+            modelBuilder.Entity("ProjetoVendas.Models.Departamento", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();

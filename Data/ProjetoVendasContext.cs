@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ProjetoVendas.Models.Departamento;
+using ProjetoVendas.Models;
 
 namespace ProjetoVendas.Data
 {
@@ -14,6 +14,8 @@ namespace ProjetoVendas.Data
         {
         }
 
-        public DbSet<ProjetoVendas.Models.Departamento.Departamento> Departamento { get; set; }
+        public DbSet<Departamento> Departamento { get; set; }
+        public DbSet<Vendedor> Vendedor { get; set; }
+        public DbSet<RegistroVendas> RegistroVendas { get; set; }
     }
 }
