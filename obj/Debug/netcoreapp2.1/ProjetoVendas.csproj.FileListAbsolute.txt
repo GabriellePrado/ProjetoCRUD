@@ -78,3 +78,5 @@ C:\Users\anton\Repositorio\ProjetoCRUD\obj\Debug\netcoreapp2.1\ProjetoVendas.pdb
 C:\Users\anton\Repositorio\ProjetoCRUD\obj\Debug\netcoreapp2.1\ProjetoVendas.genruntimeconfig.cache
 C:\Users\anton\Repositorio\ProjetoCRUD\obj\Debug\netcoreapp2.1\ProjetoVendas.csproj.CopyComplete
 C:\Users\anton\Repositorio\ProjetoCRUD\obj\Debug\netcoreapp2.1\ProjetoVendas.csprojAssemblyReference.cache
+C:\Users\anton\Repositorio\ProjetoCRUD\obj\Debug\netcoreapp2.1\Razor\Views\Vendedores\Index.cshtml.g.cs
+C:\Users\anton\Repositorio\ProjetoCRUD\obj\Debug\netcoreapp2.1\Razor\Views\Vendedores\Create.cshtml.g.cs

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Data;
+using ProjetoVendas.Services;
 
 namespace ProjetoVendas
 {
@@ -39,14 +40,21 @@ namespace ProjetoVendas
           
             services.AddDbContext<ProjetoVendasContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("ProjetoVendasContext"), builder => builder.MigrationsAssembly("ProjetoVendas")));
+
+            services.AddScoped<SeedingService>();
+            services.AddScoped<VendedorService>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService service)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                service.PopulaBaseDados();
+
             }
             else
             {

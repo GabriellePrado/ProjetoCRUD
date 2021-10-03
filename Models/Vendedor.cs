@@ -9,8 +9,9 @@ namespace ProjetoVendas.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public double SalarioBase { get; set; }
         public DateTime DataDeNascimento { get; set; }
+        public double SalarioBase { get; set; }
+       
         public Departamento Departamento { get; set; }
         public ICollection<RegistroVendas> Vendas { get; set; } = new List<RegistroVendas>();
 
@@ -18,7 +19,7 @@ namespace ProjetoVendas.Models
         {
         }
 
-        public Vendedor(int id, string nome, string email, double salarioBase, DateTime dataDeNascimento, Departamento departamento)
+        public Vendedor(int id, string nome, string email, DateTime dataDeNascimento, double salarioBase, Departamento departamento)
         {
             Id = id;
             Nome = nome;

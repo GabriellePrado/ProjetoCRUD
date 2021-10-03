@@ -13,7 +13,7 @@ namespace ProjetoVendas.Models
         public RegistroVendas()
         {
         }
-        public RegistroVendas(int id, double valor, StatusVendas status, DateTime data, Vendedor vendedor)
+        public RegistroVendas(int id, DateTime data, double valor, StatusVendas status,  Vendedor vendedor)
         {
             Id = id;
             Valor = valor;
