@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjetoVendas.Data;
 using ProjetoVendas.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace ProjetoVendas
 {
@@ -43,6 +45,7 @@ namespace ProjetoVendas
 
             services.AddScoped<SeedingService>();
             services.AddScoped<VendedorService>();
+            services.AddScoped<DepartamentoService>();
 
 
         }
@@ -50,6 +53,14 @@ namespace ProjetoVendas
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService service)
         {
+            var enUs = new CultureInfo("en-US");
+            var OpcoesLocalizacao = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(enUs),
+                SupportedCultures = new List<CultureInfo> { enUs },
+                SupportedUICultures = new List<CultureInfo> { enUs }
+            };
+            app.UseRequestLocalization(OpcoesLocalizacao);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
