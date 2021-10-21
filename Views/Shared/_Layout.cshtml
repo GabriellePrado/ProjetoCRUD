@@ -17,29 +17,42 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Loja X</a>
+    <div id="menu">
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="margin-top:0px">
+            @*
+                <img src="~/images/1_oficial_paymodesolutions_fundo_para_facebook.png"+ style="width:100%; height:100px"/>
+            *@
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="float-right">
+                        <img src="~/images/6_oficial_paymodesolutions_avatar_midias_sociais.png" style="width:100px; height: 60px;
+                                                     align-content: space-between" />
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" style="text-align:center">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index"></a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a></li>
+                        <li><a asp-area="" asp-controller="Departamentos" asp-action="Index">Departamentos</a></li>
+                        <li><a asp-area="" asp-controller="RegistroVendas" asp-action="Index">Registro</a></li>
+                        <li><a asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contato</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a></li>
-                    <li><a asp-area="" asp-controller="Departamentos" asp-action="Index">Departamentos</a></li>
-                    <li><a asp-area="" asp-controller="RegistroVendas" asp-action="Index">Registro</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <partial name="_CookieConsentPartial" />
 

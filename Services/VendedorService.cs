@@ -57,7 +57,7 @@ namespace ProjetoVendas.Services
             try
             {
                 _context.Update(obj);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException e)
             {

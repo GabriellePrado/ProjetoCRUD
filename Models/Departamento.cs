@@ -15,9 +15,9 @@ namespace ProjetoVendas.Models
         public Departamento()
         {
         }
-        public Departamento(int id, string nome)
+        public Departamento(string nome)
         {
-            Id = id;
+           
             Nome = nome;
         }
 

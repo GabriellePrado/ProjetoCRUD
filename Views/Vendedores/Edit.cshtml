@@ -4,6 +4,8 @@
     ViewData["Title"] = "Alteração de dados";
 }
 
+<link href="~/css/style.css" rel="stylesheet" type="text/css">
+
 <h2>@ViewData["Title"]</h2>
 
 <h4>Dados do Vendedor </h4>
@@ -36,10 +38,13 @@
                 <label asp-for="Vendedor.DepartamentoId" class="control-label"></label>
                 <select asp-for="Vendedor.DepartamentoId" asp-items="@(new SelectList(Model.Departamentos,"Id","Nome"))" class="form-control"></select>
 
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Salvar" class="btn btn-default" />
             </div>
         </form>
     </div>
+</div>
+<div>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts{

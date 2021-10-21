@@ -1115,9 +1115,9 @@ img {
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  display: block;
+  display: initial;
   max-width:100%;
-  height: auto;
+
 }
 .img-rounded {
   border-radius: 6px;
@@ -6280,13 +6280,13 @@ button.close {
   content: "\203a";
 }
 .carousel-indicators {
-  position: absolute;
+  position: static ;
   bottom: 10px;
   left: 50%;
   z-index: 15;
   width: 60%;
-  padding-left: 0;
-  margin-left: -30%;
+  padding-left: initial;
+  margin-left: -10%;
   text-align: center;
   list-style: none;
 }

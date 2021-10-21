@@ -1,0 +1,80 @@
+﻿/* Consulte a documentação em https: //docs.microsoft.com/aspnet/core/client-side/bundling-and-minification \
+para obter detalhes sobre como configurar este projeto para agrupar e minimizar ativos da web estáticos. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Elemento envolvente */
+/* Defina um preenchimento básico para evitar que o conteúdo atinja as bordas */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 8.4;
+}
+
+/* Faça com que os arquivos .svg no carrossel sejam exibidos corretamente em navegadores mais antigos */
+.carousel-inner .item img[src$=".svg"] {
+    max-width: 20%;
+    height: 300px;
+}
+
+.myCarousel.float-right
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    display: initial;
+    max-width: 50% !important;
+    height: auto;
+    background-color: gray;
+}
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/*setas carrossel*/
+#setaEsquerda {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: none;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+}
+#setaDireita {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: none;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+}
+
+/* Ocultar / reorganizar para telas menores  */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*_Layout*/
+#img-logo{
+    width:50px;
+    height:50px;
+}
+#menu {
+    font-size:20px;
+}
+

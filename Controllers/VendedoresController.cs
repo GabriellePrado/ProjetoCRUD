@@ -39,6 +39,7 @@ namespace ProjetoVendas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Vendedor vendedor)
         {
+            //verifica se tem erros de validação
             if (!ModelState.IsValid)
             {
                 var departamentosList = await _departamentoService.FindAllAsync();
@@ -113,6 +114,7 @@ namespace ProjetoVendas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, Vendedor vendedor)
         {
+            //verifica se tem erros de validação
             if (!ModelState.IsValid)
             {
                 var departamentosList = await _departamentoService.FindAllAsync();

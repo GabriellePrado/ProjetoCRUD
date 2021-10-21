@@ -8,7 +8,7 @@ namespace ProjetoVendas.Models
     public class Vendedor
     {
         public int Id { get; set; }
-        //esse campo é obrigatorio:
+        
         [Required(ErrorMessage = "{0} é obrigatorio")]
         //limite min e max:
         [StringLength(60, MinimumLength = 3, ErrorMessage = "Tamanho do {0} deve ser maior que {2} e menor que {1}")]
@@ -39,9 +39,8 @@ namespace ProjetoVendas.Models
         {
         }
 
-        public Vendedor(int id, string nome, string email, DateTime dataDeNascimento, double salarioBase, Departamento departamento)
+        public Vendedor(string nome, string email, DateTime dataDeNascimento, double salarioBase, Departamento departamento)
         {
-            Id = id;
             Nome = nome;
             Email = email;
             SalarioBase = salarioBase;

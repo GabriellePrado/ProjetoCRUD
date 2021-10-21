@@ -29,12 +29,34 @@ namespace ProjetoVendas.Migrations
                     b.ToTable("Departamento");
                 });
 
+            modelBuilder.Entity("ProjetoVendas.Models.Produto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descrição");
+
+                    b.Property<string>("Nome");
+
+                    b.Property<int?>("ProdutoId");
+
+                    b.Property<double>("Valor");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("Produto");
+                });
+
             modelBuilder.Entity("ProjetoVendas.Models.RegistroVendas", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("Data");
+
+                    b.Property<int?>("ProdutoId");
 
                     b.Property<int>("Status");
 
@@ -43,6 +65,8 @@ namespace ProjetoVendas.Migrations
                     b.Property<int?>("VendedorId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProdutoId");
 
                     b.HasIndex("VendedorId");
 
@@ -58,9 +82,12 @@ namespace ProjetoVendas.Migrations
 
                     b.Property<int>("DepartamentoId");
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(60);
 
                     b.Property<double>("SalarioBase");
 
@@ -71,8 +98,19 @@ namespace ProjetoVendas.Migrations
                     b.ToTable("Vendedor");
                 });
 
+            modelBuilder.Entity("ProjetoVendas.Models.Produto", b =>
+                {
+                    b.HasOne("ProjetoVendas.Models.Produto")
+                        .WithMany("ListaProdutos")
+                        .HasForeignKey("ProdutoId");
+                });
+
             modelBuilder.Entity("ProjetoVendas.Models.RegistroVendas", b =>
                 {
+                    b.HasOne("ProjetoVendas.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId");
+
                     b.HasOne("ProjetoVendas.Models.Vendedor", "Vendedor")
                         .WithMany("Vendas")
                         .HasForeignKey("VendedorId");

@@ -58,6 +58,7 @@ namespace ProjetoVendas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome")] Departamento departamento)
         {
+            //verifica se tem erros de validação
             if (ModelState.IsValid)
             {
                 _context.Add(departamento);
@@ -84,8 +85,6 @@ namespace ProjetoVendas.Controllers
         }
 
         // POST: Departamentos/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Departamento departamento)
@@ -94,7 +93,7 @@ namespace ProjetoVendas.Controllers
             {
                 return NotFound();
             }
-
+            //verifica se tem erros de validação
             if (ModelState.IsValid)
             {
                 try

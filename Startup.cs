@@ -14,6 +14,7 @@ using ProjetoVendas.Data;
 using ProjetoVendas.Services;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using ProjetoVendas.Models;
 
 namespace ProjetoVendas
 {
@@ -36,16 +37,19 @@ namespace ProjetoVendas
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
           
             services.AddDbContext<ProjetoVendasContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("ProjetoVendasContext"), builder => builder.MigrationsAssembly("ProjetoVendas")));
-
+           
+            services.AddScoped<Produto>();
             services.AddScoped<SeedingService>();
             services.AddScoped<VendedorService>();
             services.AddScoped<DepartamentoService>();
+            services.AddScoped<RegistroVendasService>();
+            services.AddScoped<ProdutoService>();
 
 
         }
